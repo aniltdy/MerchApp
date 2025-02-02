@@ -8,9 +8,5 @@ public class MerchAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MerchAppApplication.class, args);
-
 	}
-    
-
-
 }
