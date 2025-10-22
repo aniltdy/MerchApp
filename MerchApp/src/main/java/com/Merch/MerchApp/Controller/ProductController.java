@@ -80,5 +80,10 @@ public class ProductController {
             return new ResponseEntity<>("Not deleted",HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @GetMapping("/products/search")
+    public ResponseEntity<List<Product>> searchProducts(@RequestParam String keyword){
+        List<Product> products=service.searchProduct(keyword);
+        return new ResponseEntity<>(products,HttpStatus.OK);
+    }
 
 }
